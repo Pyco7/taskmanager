@@ -1,0 +1,14 @@
+<form class="well" ng-submit="vm.onSubmit()" name="vm.form" novalidate>
+    <div id="task-form">
+        <formly-form model="vm.model" fields="vm.fields" options="vm.options" form="vm.form">
+            <div class="text-center">
+                <button type="submit" class="btn btn-success submit-button">
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                </button>
+                <button type="button" class="btn btn-danger" ng-click="vm.onCancel()">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                </button>
+            </div>
+        </formly-form>
+    </div>
+</form>

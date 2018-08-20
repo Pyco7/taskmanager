@@ -1,0 +1,32 @@
+<div class="tile-container well" ng-if="$ctrl.viewName === 'list'">
+    <button class="btn btn-success pull-right" ng-click="$ctrl.createTile()">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+    </button>
+    <div class="form-group">
+        <select class="form-control" ng-model="$ctrl.filterStatus" ng-change="$ctrl.filterTiles()">
+            <option ng-repeat="item in statusFilterChoices" value="{{item}}">{{item}}</option>
+        </select>
+    </div>
+
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="tile in tiles">
+            <div class="row">
+                <div class="col-sm-10 text-center">
+                    <p><i class="pull-left">{{ tile.launch_date }}</i> <b>{{ tile.status }}</b></p>
+                    <button class="btn btn-info" ng-click="$ctrl.parent.openTile(tile.id)">
+                        <b>Tasks <span class="badge">{{ tile.task_count }}</span></b>
+                    </button>
+                </div>
+                <div class="col-sm-2">
+                    <button class="btn btn-primary btn-sm" ng-click="$ctrl.editTile(tile)">
+                        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                    </button>
+                    <button class="btn btn-danger btn-sm" ng-click="$ctrl.deleteTile(tile.id)">
+                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<tile-form ng-if="$ctrl.viewName !== 'list'"></tile-form>

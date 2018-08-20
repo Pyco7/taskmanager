@@ -1,0 +1,52 @@
+html {
+    height: 100%;
+    background-color: #4f5b69;
+}
+
+body {
+    background-color: inherit;
+}
+
+#home {
+    width: 380px;
+    margin: 5% auto 5% auto;
+}
+
+.tile-container .btn-primary {
+    margin-bottom: 10px;
+}
+
+.tile-container .list-group-item {
+    margin-bottom: 10px;
+}
+
+.tile-container > .form-group {
+    width: 100px;
+}
+
+#tile-form {
+    width: 170px;
+    margin: 0 auto 0 auto;
+}
+
+.task-container {
+    padding-top: 10px;
+}
+
+.task-container .btn {
+    margin: 10px 0 10px 0;
+}
+
+.task-container .carousel-caption {
+    padding-bottom: 0px;
+    margin-bottom: 45px;
+}
+
+.task-container .carousel-indicators {
+    bottom: 43px;
+}
+
+#task-form {
+    width: 250px;
+    margin: 0 auto 0 auto;
+}

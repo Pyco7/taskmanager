@@ -1,0 +1,6 @@
+.idea/
+*.pyc
+__pycache__
+/static/
+/spa/node_modules/
+db.sqlite3
